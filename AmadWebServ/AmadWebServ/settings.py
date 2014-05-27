@@ -37,6 +37,7 @@ INSTALLED_APPS = (
 	'django.contrib.messages',
 	'django.contrib.staticfiles',
 	'top_airports',
+	'top_airports_json',
 )
 
 MIDDLEWARE_CLASSES = (

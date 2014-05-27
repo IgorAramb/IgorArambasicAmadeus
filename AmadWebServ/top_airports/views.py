@@ -7,20 +7,16 @@ import pandas as pd
 import numpy as np
 
 def index(request):
-	n=10
-	#BookFile='../../Data/BookingsNoDuplicates.csv'
-	BookFile='../../Data/bookings.csv'
-	BookingsAll = pd.read_csv(BookFile, sep='^', nrows=100, usecols=['arr_port','pax'])
-	BookingsAll=BookingsAll.dropna()
-	TopAirport = BookingsAll.groupby(['arr_port']).sum()
-	TopAirport = TopAirport.sort('pax', ascending=0)
-	TopAirport=TopAirport.reset_index()
-	TopN=TopAirport[:n]
-	TopN.index=TopN.index+1
-	jsonTopN=TopN.to_json()
-	print >> open('WebOutputCheck.txt', 'w'), TopN , TopN, jsonTopN
-    	#return HttpResponse(TopN)
-	#return HttpResponse("Hello, world. You're at the Airport index.")
-	return HttpResponse(jsonTopN)
+	html = "<html><body>\
+	Welcome to Amadeus Data Processing Unit.<br> <br> \
+	We have access to the total number of passengers for every airport (year 2013).<br> \
+	The airports are sorted by the number of arriving passengers.<br> \
+	This list is huge, so please giveus a number of the top arriving airports you whish to see:<br> \
+	<br> <br> <br> <br> \
+	The output will be given in JSON format<br> \
+	You can validate the output at: http://jsonformatter.curiousconcept.com/<br> \
+	</body></html>"
+	return HttpResponse(html)
+	
 
-#http://jsonformatter.curiousconcept.com/
+
