@@ -17,7 +17,10 @@ def index(request):
 	TopAirport=TopAirport.reset_index()
 	TopN=TopAirport[:n]
 	TopN.index=TopN.index+1
-	print >> open('WebOutputCheck.txt', 'w'), TopN 
+	jsonTopN=TopN.to_json()
+	print >> open('WebOutputCheck.txt', 'w'), TopN , TopN, jsonTopN
     	#return HttpResponse(TopN)
-	return HttpResponse("Hello, world. You're at the Airport index.")
-	
+	#return HttpResponse("Hello, world. You're at the Airport index.")
+	return HttpResponse(jsonTopN)
+
+#http://jsonformatter.curiousconcept.com/
