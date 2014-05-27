@@ -12,10 +12,10 @@ def index(request):
 	<body>\
 	Welcome to Amadeus Data Processing Unit.<br> <br> \
 	2013 was great year for airport transport, but what do you think,  which airport had the highest number of passengers?.<br> \
-	Well, we have sorted the airports by the number of arriving passengers.<br> \
-	This list is huge, so please giveus a number of the top arriving airports you whish to see:<br> \
+	Well, we have sorted the airports by the number of arriving passengers.\
+	This list is huge, so please giveus a number of the top arrival airports you whish to see:<br> \
 	<form action=\"/top_airports_json/\" method=\"get\">\
-  	Airports number: <input type=\"text\" name=\"n\"><br>\
+  	Number of Top arrival airports : <input type=\"text\" name=\"n\"><br>\
   	<input type=\"submit\" value=\"Submit\">\
 	</form>	\
 	<br> <br> <br> <br> \

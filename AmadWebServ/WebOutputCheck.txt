@@ -1,8 +1,4 @@
-   arr_port  pax
-1  BWI         6
-2  PVG         6
-3  NRT         6
-4  LIS         4
-5  SIN         4
+  arr_port    pax
+0      LHR  88809
 
-[5 rows x 2 columns] [{"arr_port":"BWI     ","pax":6},{"arr_port":"PVG     ","pax":6},{"arr_port":"NRT     ","pax":6},{"arr_port":"LIS     ","pax":4},{"arr_port":"SIN     ","pax":4}]
+[1 rows x 2 columns] [{"arr_port":"LHR","pax":88809.0}]
